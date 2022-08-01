@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Cafe24Ohsquare";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+}
+body .hide {
+  position: absolute;
+  z-index: -1;
+  width: 15px;
+  height: 10px;
+  left: 70px;
+  top: 25px;
+  background-color: white;
+}
+body .leftVar {
+  color: white;
+  overflow-y: auto;
+  width: 240px;
+  height: 970px;
+}
+body .varOfHead {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 0 25px;
+}
+body .varOfHead i {
+  font-size: 20px;
+  padding-right: 7px;
+}
+body .varOfHead .logo {
+  padding: 18px 14px 18px 16px;
+  display: flex;
+}
+body .varOfHead .logo i {
+  color: red;
+  font-size: 27px;
+}
+body .varOfHead .logo p {
+  position: relative;
+  top: 5px;
+  margin: 0;
+}
+body .varOfHead .logo .logoP {
+  font-family: "Cafe24Ohsquare";
+}
+body .varOfHead .logo .kr {
+  font-size: 10px;
+  font-weight: bold;
+  color: silver;
+  position: relative;
+  top: -7px;
+}
+body .leftVar .AllContents .contents, body .leftVar .AllContents .subS, body .leftVar .AllContents .YoutubeMore {
+  border-bottom: solid rgb(73, 72, 72) 0.2px;
+  padding-bottom: 24px;
+}
+body .leftVar .AllContents .contents .SubSP, body .leftVar .AllContents .subS .SubSP, body .leftVar .AllContents .YoutubeMore .SubSP {
+  padding: 8px 24px;
+  margin: 0;
+  font-size: 14px;
+  color: silver;
+}
+body .leftVar .AllContents .YoutubeMore i {
+  color: red;
+}
+body .leftVar .AllContents .content {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+body .leftVar .AllContents .content i {
+  position: relative;
+  left: 12%;
+  right: 88%;
+  top: 20px;
+  transform: translate(-50%, -50%);
+  margin: 5px 10px;
+  font-size: 17px;
+  padding: 6px 0;
+}
+body .leftVar .AllContents .content p {
+  position: relative;
+  left: 40px;
+  top: 4px;
+  margin: 0;
+  font-size: 13px;
+}
+body .leftVar .AllContents .DogSpeak .TopSpeak {
+  padding: 10px 24px 0 24px;
+  font-size: 13px;
+}
+body .leftVar .AllContents .DogSpeak .TopSpeak .Wspeak {
+  margin: 3px 0;
+  color: rgb(179, 176, 176);
+}
+body .leftVar .AllContents .DogSpeak .BottomSpeak {
+  margin: 20px 0;
+  padding-left: 24px;
+}
+body .leftVar .AllContents .DogSpeak .BottomSpeak .Lspeak {
+  margin: 2px 0;
+  color: rgb(97, 96, 96);
+  font-size: 12px;
+}/*# sourceMappingURL=scss.css.map */
