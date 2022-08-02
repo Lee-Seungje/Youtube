@@ -4,121 +4,276 @@
     font-weight: normal;
     font-style: normal;
 }
+body::-webkit-scrollbar{
+    background-color: #202020;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(146, 145, 145);
+    border-radius: 20px;
+    background-clip: padding-box;
+    border: 5px solid transparent;
+}
 body{
-    .hide{
-        position: absolute;
-        z-index: -1;
-        width: 15px;
-        height: 10px;
-        left: 70px;
-        top: 25px;
-        background-color: white;
-    }
+    overflow-x: hidden;
+    overflow-y: scroll;
     margin: 0;
     padding: 0;
     background-color: #202020;
-    .leftVar{
-        color: white;
-        overflow-y: auto;
-        width: 240px;
-        height: 970px;
-    }
-    .leftVar::-webkit-scrollbar{
-        background-color: #202020;
-    }
-    .leftVar::-webkit-scrollbar-thumb{
-        background-color: rgb(146, 145, 145);
-        border-radius: 20px;
-        background-clip: padding-box;
-        border: 5px solid transparent;
-    }
-    .varOfHead{
-        color: white;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 0 0 0 25px;
-        i{
-            font-size: 20px;
-            padding-right: 7px;
-        }
-        .logo{
-            padding: 18px 14px 18px 16px;
-            display: flex;
-            i{
-                color: red;
-                font-size: 27px;
-            }
-            p{
-                position: relative;
-                top: 5px;
+    display: flex;
+    .main{
+        .left{
+            position: fixed;
+            z-index: 5001;
+            width: 200px;
+            .leftVar{
                 margin: 0;
+                color: white;
+                overflow-y: auto;
+                width: 240px;
+                height: 970px;
             }
-            .logoP{
-                font-family: 'Cafe24Ohsquare';
+            .leftVar::-webkit-scrollbar{
+                background-color: #202020;
             }
-            .kr{
-                font-size: 10px;
-                font-weight: bold;
-                color: silver;
-                position: relative;
-                top: -7px;
+            .leftVar::-webkit-scrollbar-thumb{
+                background-color: rgb(146, 145, 145);
+                border-radius: 20px;
+                background-clip: padding-box;
+                border: 5px solid transparent;
             }
-        }
-    }
-    .leftVar{
-        .AllContents{
-            .contents, .subS, .YoutubeMore{
-                border-bottom: solid rgb(73, 72, 72) 0.2px;
-                padding-bottom: 24px;
-                .SubSP{
-                    padding: 8px 24px;
-                    margin: 0;
-                    font-size: 14px;
-                    color: silver;
+            .varOfHead{
+                .hide{
+                    position: absolute;
+                    z-index: -1;
+                    width: 15px;
+                    height: 10px;
+                    left: 70px;
+                    top: 25px;
+                    background-color: white;
                 }
-            }
-            .YoutubeMore i{
-                color: red;
-            }
-            .content{
+                color: white;
                 display: flex;
                 align-items: center;
                 text-align: center;
+                padding: 0 0 0 25px;
                 i{
-                    position: relative;
-                    left: 12%;
-                    right: 88%;
-                    top: 20px;
-                    transform: translate(-50%, -50%);
-                    margin: 5px 10px;
-                    font-size: 17px;
-                    padding: 6px 0;
+                    font-size: 20px;
+                    padding-right: 7px;
                 }
-                p{
-                    position: relative;
-                    left: 40px;
-                    top: 4px;
-                    margin: 0;
-                    font-size: 13px;
-                }
-            }
-            .DogSpeak{
-                .TopSpeak{
-                    padding: 10px 24px 0 24px;
-                    font-size: 13px;
-                    .Wspeak{
-                        margin: 3px 0;
-                        color: rgb(179, 176, 176);
+                .logo{
+                    padding: 18px 14px 18px 16px;
+                    display: flex;
+                    i{
+                        color: red;
+                        font-size: 27px;
+                    }
+                    p{
+                        position: relative;
+                        top: 5px;
+                        margin: 0;
+                    }
+                    .logoP{
+                        font-family: 'Cafe24Ohsquare';
+                    }
+                    .kr{
+                        font-size: 10px;
+                        font-weight: bold;
+                        color: silver;
+                        position: relative;
+                        top: -7px;
                     }
                 }
-                .BottomSpeak{
-                    margin: 20px 0;
-                    padding-left: 24px;
-                    .Lspeak{
-                        margin: 2px 0;
-                        color: rgb(97, 96, 96);
-                        font-size: 12px;
+            }
+            .leftVar{
+                .AllContents{
+                    .contents, .subS, .YoutubeMore{
+                        border-bottom: solid rgb(73, 72, 72) 0.2px;
+                        padding-bottom: 24px;
+                        .SubSP{
+                            padding: 8px 24px;
+                            margin: 0;
+                            font-size: 14px;
+                            color: silver;
+                        }
+                    }
+                    .YoutubeMore i{
+                        color: red;
+                    }
+                    .content{
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        i{
+                            position: relative;
+                            left: 12%;
+                            right: 88%;
+                            top: 20px;
+                            transform: translate(-50%, -50%);
+                            margin: 5px 10px;
+                            font-size: 17px;
+                            padding: 6px 0;
+                        }
+                        p{
+                            position: relative;
+                            left: 40px;
+                            top: 4px;
+                            margin: 0;
+                            font-size: 13px;
+                        }
+                    }
+                    .DogSpeak{
+                        .TopSpeak{
+                            padding: 10px 24px 0 24px;
+                            font-size: 13px;
+                            .Wspeak{
+                                margin: 3px 0;
+                                color: rgb(179, 176, 176);
+                            }
+                        }
+                        .BottomSpeak{
+                            margin: 20px 0 80px 0;
+                            padding-left: 24px;
+                            .Lspeak{
+                                margin: 2px 0;
+                                color: rgb(97, 96, 96);
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .RealMain{
+        position: relative;
+        left: 245px;
+        height: 100%;
+        overflow-y: scroll;
+        nav{
+            width: 100%;
+            position: fixed;
+            #useContentDiv{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 88%;
+            }
+            .NavContent{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                height: 56px;
+                border-bottom: solid rgb(73, 72, 72) 0.2px;
+                .useContent{
+                    padding: 0 12px;
+                    height: 32px;
+                    font-size: 14px;
+                    background-color: #323232;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    color: white;
+                    margin-right: 12px;
+                    transition: all 0.2s ease-in-out;
+                    cursor: pointer;
+                }
+                .useContent:hover{
+                    filter: brightness(150%);
+                    transition: all 0.2s ease-in-out;
+                }
+                .outer{
+                    position: relative;
+                    left: 20%;  
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    .leftSearch{
+                        background-color: #121212;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        position: relative;
+                        left: 1px;
+                        opacity: 0;
+                    }
+                    .OnLeftSearch{
+                        opacity: 1;
+                        border: solid 0.5px rgb(39, 125, 236);
+                        border-right: 0;
+                    }
+                    .mainSearch{
+                        border: solid 0.5px #323232;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        background-color: #121212;
+                        width: 592px;
+                        height: 40px;
+                        i{
+                            color: silver;
+                            margin: 0 10px;
+                        }
+                        input{
+                            outline: none;
+                            padding: 0 0 0 5px;
+                            width: 502px;
+                            height: 34px;
+                            color: silver;
+                            background-color: #121212;
+                            border: 0;
+                            font-size: 15px;
+                        }
+                        .rightSearch{
+                            z-index: 5000;
+                            background-color: #323232;
+                            height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            width: 64px;
+                            align-items: center;
+                            i{
+                                color: white;
+                            }
+                        }
+                    }
+                    .OnmainSearch{
+                        border: solid 0.5px rgb(39, 125, 236);
+                        border-left: 0;
+                    }
+                    .soundSearch{
+                        margin-left: 10px;
+                        font-size: 20px;
+                        color: white;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #121212;
+                    }
+                    .MyContent{
+                        display: flex;
+                        flex-direction: row;
+                        position: relative;
+                        align-items: center;
+                        right: 0;
+                        width: 180px;
+                        justify-content: space-around;
+                        left: 47%;
+                        i{
+                            color: white;
+                            font-size: 20px;
+                        }
+                        #userIcon{
+                            font-size: 30px;
+                        }
                     }
                 }
             }

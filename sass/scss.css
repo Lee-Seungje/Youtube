@@ -4,12 +4,54 @@
   font-weight: normal;
   font-style: normal;
 }
+body::-webkit-scrollbar {
+  background-color: #202020;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(146, 145, 145);
+  border-radius: 20px;
+  background-clip: padding-box;
+  border: 5px solid transparent;
+}
+
 body {
+  overflow-x: hidden;
+  overflow-y: scroll;
   margin: 0;
   padding: 0;
   background-color: #202020;
+  display: flex;
 }
-body .hide {
+body .main .left {
+  position: fixed;
+  z-index: 5001;
+  width: 200px;
+}
+body .main .left .leftVar {
+  margin: 0;
+  color: white;
+  overflow-y: auto;
+  width: 240px;
+  height: 970px;
+}
+body .main .left .leftVar::-webkit-scrollbar {
+  background-color: #202020;
+}
+body .main .left .leftVar::-webkit-scrollbar-thumb {
+  background-color: rgb(146, 145, 145);
+  border-radius: 20px;
+  background-clip: padding-box;
+  border: 5px solid transparent;
+}
+body .main .left .varOfHead {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 0 25px;
+}
+body .main .left .varOfHead .hide {
   position: absolute;
   z-index: -1;
   width: 15px;
@@ -18,74 +60,52 @@ body .hide {
   top: 25px;
   background-color: white;
 }
-body .leftVar {
-  color: white;
-  overflow-y: auto;
-  width: 240px;
-  height: 970px;
-}
-body .leftVar::-webkit-scrollbar {
-  background-color: #202020;
-}
-body .leftVar::-webkit-scrollbar-thumb {
-  background-color: rgb(146, 145, 145);
-  border-radius: 20px;
-  background-clip: padding-box;
-  border: 5px solid transparent;
-}
-body .varOfHead {
-  color: white;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 0 0 0 25px;
-}
-body .varOfHead i {
+body .main .left .varOfHead i {
   font-size: 20px;
   padding-right: 7px;
 }
-body .varOfHead .logo {
+body .main .left .varOfHead .logo {
   padding: 18px 14px 18px 16px;
   display: flex;
 }
-body .varOfHead .logo i {
+body .main .left .varOfHead .logo i {
   color: red;
   font-size: 27px;
 }
-body .varOfHead .logo p {
+body .main .left .varOfHead .logo p {
   position: relative;
   top: 5px;
   margin: 0;
 }
-body .varOfHead .logo .logoP {
+body .main .left .varOfHead .logo .logoP {
   font-family: "Cafe24Ohsquare";
 }
-body .varOfHead .logo .kr {
+body .main .left .varOfHead .logo .kr {
   font-size: 10px;
   font-weight: bold;
   color: silver;
   position: relative;
   top: -7px;
 }
-body .leftVar .AllContents .contents, body .leftVar .AllContents .subS, body .leftVar .AllContents .YoutubeMore {
+body .main .left .leftVar .AllContents .contents, body .main .left .leftVar .AllContents .subS, body .main .left .leftVar .AllContents .YoutubeMore {
   border-bottom: solid rgb(73, 72, 72) 0.2px;
   padding-bottom: 24px;
 }
-body .leftVar .AllContents .contents .SubSP, body .leftVar .AllContents .subS .SubSP, body .leftVar .AllContents .YoutubeMore .SubSP {
+body .main .left .leftVar .AllContents .contents .SubSP, body .main .left .leftVar .AllContents .subS .SubSP, body .main .left .leftVar .AllContents .YoutubeMore .SubSP {
   padding: 8px 24px;
   margin: 0;
   font-size: 14px;
   color: silver;
 }
-body .leftVar .AllContents .YoutubeMore i {
+body .main .left .leftVar .AllContents .YoutubeMore i {
   color: red;
 }
-body .leftVar .AllContents .content {
+body .main .left .leftVar .AllContents .content {
   display: flex;
   align-items: center;
   text-align: center;
 }
-body .leftVar .AllContents .content i {
+body .main .left .leftVar .AllContents .content i {
   position: relative;
   left: 12%;
   right: 88%;
@@ -95,27 +115,162 @@ body .leftVar .AllContents .content i {
   font-size: 17px;
   padding: 6px 0;
 }
-body .leftVar .AllContents .content p {
+body .main .left .leftVar .AllContents .content p {
   position: relative;
   left: 40px;
   top: 4px;
   margin: 0;
   font-size: 13px;
 }
-body .leftVar .AllContents .DogSpeak .TopSpeak {
+body .main .left .leftVar .AllContents .DogSpeak .TopSpeak {
   padding: 10px 24px 0 24px;
   font-size: 13px;
 }
-body .leftVar .AllContents .DogSpeak .TopSpeak .Wspeak {
+body .main .left .leftVar .AllContents .DogSpeak .TopSpeak .Wspeak {
   margin: 3px 0;
   color: rgb(179, 176, 176);
 }
-body .leftVar .AllContents .DogSpeak .BottomSpeak {
-  margin: 20px 0;
+body .main .left .leftVar .AllContents .DogSpeak .BottomSpeak {
+  margin: 20px 0 80px 0;
   padding-left: 24px;
 }
-body .leftVar .AllContents .DogSpeak .BottomSpeak .Lspeak {
+body .main .left .leftVar .AllContents .DogSpeak .BottomSpeak .Lspeak {
   margin: 2px 0;
   color: rgb(97, 96, 96);
   font-size: 12px;
+}
+body .RealMain {
+  position: relative;
+  left: 245px;
+  height: 100%;
+  overflow-y: scroll;
+}
+body .RealMain nav {
+  width: 100%;
+  position: fixed;
+}
+body .RealMain nav #useContentDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88%;
+}
+body .RealMain nav .NavContent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 56px;
+  border-bottom: solid rgb(73, 72, 72) 0.2px;
+}
+body .RealMain nav .NavContent .useContent {
+  padding: 0 12px;
+  height: 32px;
+  font-size: 14px;
+  background-color: #323232;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-right: 12px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+body .RealMain nav .NavContent .useContent:hover {
+  filter: brightness(150%);
+  transition: all 0.2s ease-in-out;
+}
+body .RealMain nav .NavContent .outer {
+  position: relative;
+  left: 20%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+body .RealMain nav .NavContent .outer .leftSearch {
+  background-color: #121212;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  left: 1px;
+  opacity: 0;
+}
+body .RealMain nav .NavContent .outer .OnLeftSearch {
+  opacity: 1;
+  border: solid 0.5px rgb(39, 125, 236);
+  border-right: 0;
+}
+body .RealMain nav .NavContent .outer .mainSearch {
+  border: solid 0.5px #323232;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #121212;
+  width: 592px;
+  height: 40px;
+}
+body .RealMain nav .NavContent .outer .mainSearch i {
+  color: silver;
+  margin: 0 10px;
+}
+body .RealMain nav .NavContent .outer .mainSearch input {
+  outline: none;
+  padding: 0 0 0 5px;
+  width: 502px;
+  height: 34px;
+  color: silver;
+  background-color: #121212;
+  border: 0;
+  font-size: 15px;
+}
+body .RealMain nav .NavContent .outer .mainSearch .rightSearch {
+  z-index: 5000;
+  background-color: #323232;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  width: 64px;
+  align-items: center;
+}
+body .RealMain nav .NavContent .outer .mainSearch .rightSearch i {
+  color: white;
+}
+body .RealMain nav .NavContent .outer .OnmainSearch {
+  border: solid 0.5px rgb(39, 125, 236);
+  border-left: 0;
+}
+body .RealMain nav .NavContent .outer .soundSearch {
+  margin-left: 10px;
+  font-size: 20px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+}
+body .RealMain nav .NavContent .outer .MyContent {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  right: 0;
+  width: 180px;
+  justify-content: space-around;
+  left: 47%;
+}
+body .RealMain nav .NavContent .outer .MyContent i {
+  color: white;
+  font-size: 20px;
+}
+body .RealMain nav .NavContent .outer .MyContent #userIcon {
+  font-size: 30px;
 }/*# sourceMappingURL=scss.css.map */
