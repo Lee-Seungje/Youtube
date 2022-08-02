@@ -24,6 +24,15 @@ body .leftVar {
   width: 240px;
   height: 970px;
 }
+body .leftVar::-webkit-scrollbar {
+  background-color: #202020;
+}
+body .leftVar::-webkit-scrollbar-thumb {
+  background-color: rgb(146, 145, 145);
+  border-radius: 20px;
+  background-clip: padding-box;
+  border: 5px solid transparent;
+}
 body .varOfHead {
   color: white;
   display: flex;
