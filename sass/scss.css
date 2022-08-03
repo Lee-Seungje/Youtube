@@ -16,6 +16,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
+  z-index: -10;
+  width: 1920px;
   overflow-x: hidden;
   overflow-y: scroll;
   margin: 0;
@@ -61,10 +63,12 @@ body .main .left .varOfHead .hide {
   background-color: white;
 }
 body .main .left .varOfHead i {
+  cursor: pointer;
   font-size: 20px;
   padding-right: 7px;
 }
 body .main .left .varOfHead .logo {
+  cursor: pointer;
   padding: 18px 14px 18px 16px;
   display: flex;
 }
@@ -148,9 +152,13 @@ body .RealMain {
   position: relative;
   left: 245px;
   height: 100%;
-  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
 }
 body .RealMain nav {
+  background-color: #202020;
+  opacity: 0.98;
+  z-index: 10000;
   width: 100%;
   position: fixed;
 }
@@ -169,6 +177,7 @@ body .RealMain nav .NavContent {
   border-bottom: solid rgb(73, 72, 72) 0.2px;
 }
 body .RealMain nav .NavContent .useContent {
+  opacity: 1;
   padding: 0 12px;
   height: 32px;
   font-size: 14px;
@@ -283,4 +292,81 @@ body .RealMain nav .NavContent .outer .MyContent i {
 }
 body .RealMain nav .NavContent .outer .MyContent #userIcon {
   font-size: 30px;
+}
+
+.videos {
+  background-color: #181818;
+  width: 1650px;
+  z-index: 1;
+  position: relative;
+  top: 115px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.videos .Forth {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  display: flex;
+}
+.videos .Forth .video {
+  cursor: pointer;
+  margin: 0 8px;
+}
+.videos .Forth .video .VideoIMG {
+  transition: all ease-out 0.3s;
+  width: 360px;
+  height: 202px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.videos .Forth .video .OnVideoIMG {
+  transform: translate(-10%, -10%);
+  transition: all ease-out 0.3s;
+  position: absolute;
+  width: 470px;
+  z-index: 100000;
+  height: 300px;
+}
+.videos .Forth .video .Videoinform {
+  color: white;
+  display: flex;
+}
+.videos .Forth .video .Videoinform #uploader {
+  font-size: 33px;
+}
+.videos .Forth .video .Videoinform #jjj {
+  float: right;
+  font-size: 20px;
+}
+.videos .Forth .video .Videoinform h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 100;
+  margin-left: 10px;
+  margin-right: 220px;
+}
+.videos .Forth .video .UploaderName {
+  font-size: 14px;
+  color: silver;
+  font-weight: 100;
+  margin: 0;
+  position: relative;
+  left: 43px;
+}
+.videos .Forth .video .Someinform {
+  color: silver;
+  display: flex;
+  position: relative;
+  left: 43px;
+}
+.videos .Forth .video .Someinform i {
+  display: none;
+}
+.videos .Forth .video .Someinform p {
+  margin: 0;
+}
+.videos .Forth .video .Someinform .watched {
+  margin-right: 5px;
 }/*# sourceMappingURL=scss.css.map */
