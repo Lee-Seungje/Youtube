@@ -99,15 +99,21 @@ body{
                     .YoutubeMore i{
                         color: red;
                     }
+                    .content:hover{
+                        background-color: #383838;
+                        cursor: pointer;
+                    }
                     .content{
                         display: flex;
                         align-items: center;
                         text-align: center;
+                        text-align: center;
                         i{
+                            width: 15px;
                             position: relative;
                             left: 12%;
                             right: 88%;
-                            top: 20px;
+                            top: 14px;
                             transform: translate(-50%, -50%);
                             margin: 5px 10px;
                             font-size: 17px;
@@ -116,7 +122,6 @@ body{
                         p{
                             position: relative;
                             left: 40px;
-                            top: 4px;
                             margin: 0;
                             font-size: 13px;
                         }
@@ -205,7 +210,7 @@ body{
                     .OnLeftSearch{
                         opacity: 1;
                         border: solid 0.5px rgb(39, 125, 236);
-                        border-right: 0;
+                        border-right: 0px;
                     }
                     .mainSearch{
                         border: solid 0.5px #323232;
@@ -229,6 +234,10 @@ body{
                             border: 0;
                             font-size: 15px;
                         }
+                        .onRightSearch{
+                            border: solid 0.5px #323232;
+                            border-left: solid 0.5px rgb(39, 125, 236);
+                        }
                         .rightSearch{
                             z-index: 5000;
                             background-color: #323232;
@@ -245,6 +254,7 @@ body{
                     .OnmainSearch{
                         border: solid 0.5px rgb(39, 125, 236);
                         border-left: 0;
+                        border-right: 0;
                     }
                     .soundSearch{
                         margin-left: 10px;
