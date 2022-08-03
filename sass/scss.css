@@ -100,16 +100,22 @@ body .main .left .leftVar .AllContents .contents .SubSP, body .main .left .leftV
 body .main .left .leftVar .AllContents .YoutubeMore i {
   color: red;
 }
+body .main .left .leftVar .AllContents .content:hover {
+  background-color: #383838;
+  cursor: pointer;
+}
 body .main .left .leftVar .AllContents .content {
   display: flex;
   align-items: center;
   text-align: center;
+  text-align: center;
 }
 body .main .left .leftVar .AllContents .content i {
+  width: 15px;
   position: relative;
   left: 12%;
   right: 88%;
-  top: 20px;
+  top: 14px;
   transform: translate(-50%, -50%);
   margin: 5px 10px;
   font-size: 17px;
@@ -118,7 +124,6 @@ body .main .left .leftVar .AllContents .content i {
 body .main .left .leftVar .AllContents .content p {
   position: relative;
   left: 40px;
-  top: 4px;
   margin: 0;
   font-size: 13px;
 }
@@ -204,7 +209,7 @@ body .RealMain nav .NavContent .outer .leftSearch {
 body .RealMain nav .NavContent .outer .OnLeftSearch {
   opacity: 1;
   border: solid 0.5px rgb(39, 125, 236);
-  border-right: 0;
+  border-right: 0px;
 }
 body .RealMain nav .NavContent .outer .mainSearch {
   border: solid 0.5px #323232;
@@ -229,6 +234,10 @@ body .RealMain nav .NavContent .outer .mainSearch input {
   border: 0;
   font-size: 15px;
 }
+body .RealMain nav .NavContent .outer .mainSearch .onRightSearch {
+  border: solid 0.5px #323232;
+  border-left: solid 0.5px rgb(39, 125, 236);
+}
 body .RealMain nav .NavContent .outer .mainSearch .rightSearch {
   z-index: 5000;
   background-color: #323232;
@@ -244,6 +253,7 @@ body .RealMain nav .NavContent .outer .mainSearch .rightSearch i {
 body .RealMain nav .NavContent .outer .OnmainSearch {
   border: solid 0.5px rgb(39, 125, 236);
   border-left: 0;
+  border-right: 0;
 }
 body .RealMain nav .NavContent .outer .soundSearch {
   margin-left: 10px;
